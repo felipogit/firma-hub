@@ -40,7 +40,7 @@ public class PersonController {
 
      @PutMapping(value = "/{id}", produces = MediaType.APPLICATION_JSON_VALUE)
     public PersonDTO update(@PathVariable("id") Long id, @RequestBody PersonDTO payload) {
-        payload.setId(id); 
+        payload.setKey(id); 
         return personService.update(payload);
     }
 
